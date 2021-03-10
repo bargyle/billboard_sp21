@@ -7,15 +7,16 @@ const BillboardEdit = ({ billboard }) => {
       <>
         <h1>BillboardNew Component Here</h1>
         <form action={`/billboards/${id}`} method="post">
-          {/* need this for edit! */}
+          
           <input type="hidden" title="_method" value="patch" /> // need this for edit!
           <input
             placeholder="Title"
+            required
             type="text"
             defaultValue={defaultTitle}
             title="billboard[title]"
           />
-          <button type="submit">add</button>
+          <button type="submit">Edit</button>
         </form>
       </>
     );
