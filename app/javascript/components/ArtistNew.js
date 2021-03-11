@@ -1,6 +1,5 @@
 import React from "react";
-
-const ArtistNew = ({ artist, billboard }) => {
+const ArtistNew = ({ billboard, artist }) => {
     const { id } = billboard;
     const { name, errors} = artist;
     const defaultName = name ? name : "";
@@ -9,10 +8,6 @@ const ArtistNew = ({ artist, billboard }) => {
         <h1>Artist New</h1>
         {errors && errors}
         <form action={`/billboards/${id}/artists`} method="post">
-          
-          <input 
-            placeholder = "name"
-            defaultValue={defaultName} 
             type="text"
             name="artist[name]"
           />
@@ -21,5 +16,4 @@ const ArtistNew = ({ artist, billboard }) => {
       </>
     );
 }
-
 export default ArtistNew;

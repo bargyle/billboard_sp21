@@ -1,12 +1,11 @@
 import React from "react";
 
-
 const Artists = ({ artists, billboard }) => {
-    const { title, id } = billboard;
+    const { title, name, id } = billboard;
     return (
       <>
         <h1>Artists Page from {title} billboard</h1>
-        <p>{}</p>
+        <h2>{name}</h2>
         <a href={`/billboards/${id}`}>back to billboard show</a>
         <br />
         <a href={`/`}>back to billboards</a>

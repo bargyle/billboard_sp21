@@ -6,8 +6,6 @@ const Artist = ({ artist, billboard }) => {
       <>
         <div className="artist-card">
           <h1>Artist: {name}</h1>
-          <h6>Billboard: {billboard.title}</h6>
-          <p>{body}</p>
           <a href={`/billboards`}>billboards</a>
           <br />
           <a href={`/`}>also billboards</a>
