@@ -8,13 +8,13 @@ const BillboardEdit = ({ billboard }) => {
         <h1>Edit Billboard</h1>
         <form action={`/billboards/${id}`} method="post">
           
-          <input type="hidden" title="_method" value="patch" /> 
+          <input type="hidden" name="_method" value="patch" /> 
           <input
-            placeholder="Title"
+            placeholder="name"
             required
             type="text"
             defaultValue={defaultTitle}
-            title="billboard[title]"
+            name="billboard[title]"
           />
           <button type="submit">Edit</button>
         </form>

@@ -9,6 +9,10 @@
   billboard = Billboard.create(
     title: Faker::Hipster.words(number: 2)
   )
+50.times do
+  artist = Artist.create(
+    name: Faker::Music.bandrails
+  )
  
   # 10.times do 
   #   user = User.create(
