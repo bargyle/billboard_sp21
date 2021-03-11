@@ -2,7 +2,7 @@ import React from "react";
 
 const ArtistEdit = ({ artist, billboard }) => {
     const { id } = artst;
-    const { name, body, errors } = artist;
+    const { name, errors } = artist;
     return (
       <>
         <h1>Artist Edit</h1>
@@ -11,8 +11,6 @@ const ArtistEdit = ({ artist, billboard }) => {
           <input type="hidden" name="_method" value="patch" />
           <p>Name</p>
           <input defaultValue={name} name="artist[name]" type="text" />
-          <p>Body</p>
-          <textarea defaultValue={body} name="artist[body]" />
           <br />
           <button type="submit">update</button>
         </form>
