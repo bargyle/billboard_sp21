@@ -1,3 +1,3 @@
 class Artist < ApplicationRecord
-  # belongs_to :billboard
+  belongs_to :billboard
 end
