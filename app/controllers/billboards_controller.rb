@@ -11,7 +11,7 @@ class BillboardsController < ApplicationController
 
   def new
     @billboard = Billboard.new 
-    render component: "BillboardNew", props: { billboard: @billboard }
+    render component: 'BillboardNew', props: { billboard: @billboard }
   end
 
   def edit

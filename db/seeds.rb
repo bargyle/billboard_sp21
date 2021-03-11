@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 10.times do
   billboard = Billboard.create(
-    title Faker::Educator.billboard
+    title: Faker::Hipster.words(number: 2)
   )
  
   # 10.times do 
