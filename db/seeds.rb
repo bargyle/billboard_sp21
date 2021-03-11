@@ -5,14 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-50.times do
+
+
+10.times do
   billboard = Billboard.create(
-    title: Faker::Music.band
+  title: Faker::Hipster.words(number: 2)
   )
-  50.times do
+  10.times do
     artist = Artist.create(
-      name: Faker::Music.band
-    
+    name: Faker::Music.band
+    )
+  end
+  
+  10.times do 
+    song = Song.create(
+    name: Faker::Music::GratefulDead.song
     )
   end
 end

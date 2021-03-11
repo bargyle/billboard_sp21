@@ -24,11 +24,11 @@ class ArtistsController < ApplicationController
     def create
         @artist = @billboard.artists.new(artist_params)
         if @artist.save
-            redirect_to [@billboard, @artist]
+        # redirect_to [@sub, @topic]
+        redirect_to billboard_artists_path(@billboard)
         else
-            render :edit
+        render component: 'ArtistNew', props: { billboard: @billboard, artist: @artist }
         end
-
     end
     
     def destroy
@@ -37,15 +37,17 @@ class ArtistsController < ApplicationController
     end
 
     private
+    def artist_params
+        params.require(:artist).permit(:name)
+    end
+    
     def set_billboard
         @billboard = Billboard.find(params[:billboard_id])
     end
 
     def set_artist
-        @artist = Artist.find(params[:id])
+        @artist = @billboard.artist.find(params[:id])
     end
-    def artist_params
-        params.require(:artist).permit(:name)
-    end
+    
 
 end
