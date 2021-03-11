@@ -5,17 +5,18 @@ const BillboardEdit = ({ billboard }) => {
     const defaultTitle = title ? title : "";
     return (
       <>
-        <h1>BillboardNew Component Here</h1>
+        <h1>Edit Billboard</h1>
         <form action={`/billboards/${id}`} method="post">
-          {/* need this for edit! */}
-          <input type="hidden" title="_method" value="patch" /> // need this for edit!
+          
+          <input type="hidden" title="_method" value="patch" /> 
           <input
             placeholder="Title"
+            required
             type="text"
             defaultValue={defaultTitle}
             title="billboard[title]"
           />
-          <button type="submit">add</button>
+          <button type="submit">Edit</button>
         </form>
       </>
     );

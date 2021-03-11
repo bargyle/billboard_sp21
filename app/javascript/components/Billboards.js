@@ -5,13 +5,13 @@ const url = "http://localhost:3000/billboards/";
 const Billboards = ({ billboards }) => {
   return (
     <>
-      <h1>Billboards Component Here</h1>
-      <a href={ url + "new" }>add billboard</a>
-      { subs.map((sub) => (
+      <h1>Billboards</h1>
+      <a href={ "/billboards/new" }>add billboard</a>
+      { billboards.map((billboard) => (
         <div>
-          <h3>{sub.name}</h3>
-          <a href={ url + billboard.id }>show</a>
-          <a href={ url + billboard.id + '/edit' }>edit</a>
+          <h3>{billboard.title}</h3>
+          <a href={ url + billboard.id }>Show</a>
+          <a href={ url + billboard.id + "/edit" }>edit</a>
           <a
             href={ url + billboard.id }
             data-method="delete"
