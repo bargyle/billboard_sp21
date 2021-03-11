@@ -22,7 +22,7 @@ class ArtistsController < ApplicationController
     end
 
     def create
-        @artist = @billboard.artist.new(topic_params)
+        @artist = @billboard.artists.new(artist_params)
         if @artist.save
             redirect_to [@billboard, @artist]
         else

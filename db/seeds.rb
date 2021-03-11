@@ -5,27 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-10.times do
-  billboard = Billboard.create(
-    title: Faker::Hipster.words(number: 2)
-  )
 50.times do
-  artist = Artist.create(
-    name: Faker::Music.bandrails
+  billboard = Billboard.create(
+    title: Faker::Music.band
   )
- 
-  # 10.times do 
-  #   user = User.create(
-  #     first_name: Faker::Name.first_name,
-  #     last_name: Faker::Name.last_name
-  #   )
-
-  #   Enrollment.create(
-  #     role: roles.sample,
-  #     course_id: course.id,
-  #     user_id: user.id
-  #   )
-  # end
+  50.times do
+    artist = Artist.create(
+      name: Faker::Music.band
+    
+    )
+  end
 end
 
 puts "Data Seeded."

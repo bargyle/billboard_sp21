@@ -10,13 +10,13 @@ const Billboards = ({ billboards }) => {
       { billboards.map((billboard) => (
         <div>
           <h3>{billboard.title}</h3>
-          <a href={ url + billboard.id }>Show</a>
-          <a href={ url + billboard.id + "/edit" }>edit</a>
+          <a href={ url + billboard.id }> Show</a>
+          <a href={ url + billboard.id + "/edit" }> Edit </a>
           <a
             href={ url + billboard.id }
             data-method="delete"
           >
-            delete
+            Delete
           </a>
         </div>
       ))}
