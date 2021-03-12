@@ -6,7 +6,7 @@ const Songs = ({ songs, artist }) => {
       <>
         <h1>songs Page from {name} billboard</h1>
         <a href={`/`}>back to billboard</a>
-        <a href={`/artist/${id}/songs/new`}>artist new</a>
+        <a href={`/artist/${id}/songs/`}>songs</a>
         {songs.map((song) => (
           <div key={song.id}>
             <h3>{song.name}</h3>

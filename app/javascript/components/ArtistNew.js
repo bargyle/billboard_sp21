@@ -8,9 +8,12 @@ const ArtistNew = ({ billboard, artist }) => {
         <h1>Artist New</h1>
         {errors && errors}
         <form action={`/billboards/${id}/artists`} method="post">
+            <input 
             type="text"
             name="artist[name]"
-          />
+            defaultValue={defaultName}
+            name="billboard[name]"
+            />
           <button type="submit">add</button>
         </form>
       </>
