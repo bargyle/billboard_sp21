@@ -1,10 +1,13 @@
 class SongsController < ApplicationController
+  before_action :set_artist
   def index
     @song = @artist.songs
     render component: "Songs", props: { artist: @artist, songs: @songs }
   end
 
-  def show
+  def show 
+    @song = @artist.song
+    render component: "Song", props: {artist: @artist, song: @song}
   end
 
   def new

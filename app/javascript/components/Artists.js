@@ -1,16 +1,30 @@
 import React from "react";
 
-const Artists = ({ artists, billboard }) => {
-    const { title, name, id } = billboard;
+
+const Artists = ({ artists, billboard, }) => {
+    const { title, id } = billboard;
     return (
       <>
         <h1>Artists Page from {title} billboard</h1>
-        <h2>{name}</h2>
+        { artists.map((billboard) => (
+        <div>
+          <h3>{artist.name}</h3>
+          <a href={ url + artist.id }> Show</a>
+          <a href={ url + artist.id + "/edit" }> Edit </a>
+          <a
+            href={ url + artist.id }
+            data-method="delete"
+          >
+            Delete
+          </a>
+        </div>
+      ))}
         <a href={`/billboards/${id}`}>back to billboard show</a>
         <br />
         <a href={`/`}>back to billboards</a>
         <br />
-        <a href={`/billboards/${id}/artists/new`}>artist new</a>
+        <a href={`/billboards/${id}/artists/new`}> artist new </a>
+        <a href={`/artists/${id}/songs`}> songs</a>
         <br />
         {artists.map((artist) => (
           <div key={artist.id} className="artist-card">

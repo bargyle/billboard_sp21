@@ -6,7 +6,7 @@ const Billboards = ({ billboards }) => {
   return (
     <>
       <h1>Billboards</h1>
-      <a href={ "/billboards/new" }>Billboards</a>
+      <a href={ "/billboards/new" }>New Billboards</a>
       { billboards.map((billboard) => (
         <div>
           <h3>{billboard.title}</h3>
